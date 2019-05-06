@@ -3,16 +3,22 @@
 	<body>
 		
 		<h2>Hello world!</h2>
+		<p id="word"></p>
 		<p id="demo"></p>
 
 		<script>
 
 			var student={
-				name: "Aaysha",
-				school: "AbC"
+				firstName: "Aaysha",
+				lastName: "Ali",
+				school: "AbC",
+				fullName: function(){
+					return this.firstName + " " + this.lastName;
+				}
 			};
-
-			document.getElementById("demo").innerHTML= "My name is " +student.name+ ".<br>My school name is "+student.school; 
+			
+			document.getElementById("word").innerHTML= student.fullName();
+			document.getElementById("demo").innerHTML= "<br>My school name is "+student.school; 
 			
 		</script>
 
